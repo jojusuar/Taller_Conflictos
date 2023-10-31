@@ -7,6 +7,7 @@ public class BaseBurger {
     private String name;
     private String breadRollType;
     private String meat;
+    private String size;
     private double base_price;
     private double total_price;
     private double discount;
@@ -15,12 +16,17 @@ public class BaseBurger {
         this.name = name;
         this.breadRollType =  breadRollType;
         this.meat = meat;
+        this.size="Normal";
         this.base_price = basePrice;
         this.discount = 0;
     }
     public List<Integer> additions = new ArrayList<>();
     private final double addedPrice = 23;
 
+    public void setSize(String size) {
+    	this.size=size;
+    }
+    
     public void addAdditions(int lettuce, int tomato, int carrot, int ham){
         System.out.println("Additional additions you added: ");
         if(lettuce == 1){
